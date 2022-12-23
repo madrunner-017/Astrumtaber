@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/orders"
+        android:title="@string/see_your_orders"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about_the_author"/>
+
+    <item
+        android:id="@+id/logOut"
+        android:title="@string/log_out"/>
+</menu>

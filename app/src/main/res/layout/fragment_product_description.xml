@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/fragment_product_description_scene"
+    tools:context=".fragments.WelcomeFragment">
+
+    <ImageView
+        android:id="@+id/balck_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/black" />
+
+
+
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="@color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"/>
+
+    <LinearLayout
+        android:id="@+id/ln"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ln2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="320dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="@drawable/custom_btn_bg" />
+
+            <ImageButton
+                android:id="@+id/cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn_bg"
+                android:src="@drawable/ic_shopping_cart" />
+
+        </LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/image_product"
+        android:layout_width="300dp"
+        android:padding="20dp"
+        android:layout_marginTop="-60dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/name_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:fontFamily="@font/mina_bold"
+        android:textStyle="bold"
+        android:letterSpacing="0.3"
+        android:text="sampleText"
+
+        app:layout_constraintTop_toBottomOf="@+id/image_product" />
+
+    <TextView
+        android:id="@+id/price_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/mina_bold"
+        android:text="$$$"
+        app:layout_constraintTop_toBottomOf="@+id/name_product"
+        />
+
+
+    <TextView
+        android:id="@+id/category_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/mina"
+        android:text="cat"
+        app:layout_constraintTop_toBottomOf="@+id/price_product" />
+    <TextView
+        android:id="@+id/class_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/mina"
+        android:text="classs"
+        app:layout_constraintTop_toBottomOf="@+id/category_product" />
+
+    <TextView
+        android:id="@+id/magnitude_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/mina"
+        android:text="mag"
+        app:layout_constraintTop_toBottomOf="@+id/class_product" />
+
+    <TextView
+        android:id="@+id/temperature_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/mina"
+        android:text="temp"
+        app:layout_constraintTop_toBottomOf="@+id/magnitude_product" />
+
+    <TextView
+        android:id="@+id/mass_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/mina"
+        android:text="mass"
+        app:layout_constraintTop_toBottomOf="@+id/temperature_product" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/mass_product">
+
+        <TextView
+            android:id="@+id/description_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/mina"
+            android:text="desc"/>
+    </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:letterSpacing="0.05"
+        android:fontFamily="@font/mina_bold"
+        android:text="@string/add_to_shopping_cart"
+        android:textAllCaps="false"
+        android:backgroundTint="#8001579B"
+        app:layout_constraintBottom_toBottomOf="@id/balck_bg"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

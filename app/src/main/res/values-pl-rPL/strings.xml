@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">proj-zaliczeniowy</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="made_by_wiktor_mandra_4pp2">Wykonał: Wiktor Mandra 4pp2</string>
+    <string name="apologies_for_latency">Przepraszam za opóźnienia</string>
+    <string name="your_shopping_cart">Twój koszyk zakupowy</string>
+    <string name="your_shopping_cart_is_worth">Wartość Twojego koszyka</string>
+    <string name="place_an_order">Złóż zamówienie</string>
+    <string name="welcome_back_username">"Witaj ponownie, "</string>
+    <string name="all">Wszystko</string>
+    <string name="stars">Gwiazdy</string>
+    <string name="exoplanets">Egzoplanety</string>
+    <string name="satellites">Księżyce</string>
+    <string name="asteroids">Asteroidy</string>
+    <string name="welcome_back">Witaj ponownie</string>
+    <string name="password">hasło</string>
+    <string name="log_in">Zaloguj</string>
+    <string name="your_orders_list">Lista Twoich zamówień</string>
+    <string name="add_to_shopping_cart">Dodaj do koszyka</string>
+    <string name="create_account">Utwórz konto</string>
+    <string name="phone_number">numer telefonu</string>
+    <string name="repeat_password">powtórz hasło</string>
+    <string name="sign_up">Zarejestruj</string>
+    <string name="merry_christmas">wesołych Świąt</string>
+    <string name="orders">zamówienia</string>
+    <string name="about">o aplikacji</string>
+    <string name="logging">Trwa logowanie..</string>
+    <string name="log_failed">Logowanie nieudane</string>
+    <string name="reg_succ">Rejsetracja udana</string>
+    <string name="reg_unsucc">Rejestracja nieudana</string>
+    <string name="see_your_orders">"Twoje zamówienia "</string>
+    <string name="about_the_author">O autorze</string>
+    <string name="log_out">Wyloguj się</string>
+    <string name="search">Szukaj</string>
+</resources>

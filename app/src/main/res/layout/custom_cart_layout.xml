@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#0000DAC5"
+    android:outlineSpotShadowColor="#00FFFFFF"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_card_bg">
+
+        <ImageView
+            android:id="@+id/cart_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="40dp"
+            android:padding="12dp"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/cart_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/mina_bold"
+                android:textColor="@color/white"
+                android:text="Testowanie" />
+
+            <TextView
+                android:id="@+id/cart_price"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:fontFamily="@font/mina_bold"
+                android:layout_gravity="end"
+                android:text="$1000" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/del_item"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_close"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_btn_bg"/>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

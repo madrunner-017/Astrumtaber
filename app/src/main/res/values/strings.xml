@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">proj-zaliczeniowy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_scroll_test" translatable="false">scrollTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name_astrumtaber" translatable="false">App name: Astrumtaber</string>
+    <string name="made_by_wiktor_mandra_4pp2">Made by: Wiktor Mandra 4pp2</string>
+    <string name="apologies_for_latency">Apologies for latency</string>
+    <string name="your_shopping_cart">Your shopping cart</string>
+    <string name="your_shopping_cart_is_worth">Your shopping cart is worth:</string>
+    <string name="place_an_order">Place an order</string>
+    <string name="welcome_back_username">"Welcome back, "</string>
+    <string name="all">All</string>
+    <string name="stars">Stars</string>
+    <string name="exoplanets">Exoplanets</string>
+    <string name="satellites">Satellites</string>
+    <string name="asteroids">Asteroids</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="password">password</string>
+    <string name="log_in">Log In</string>
+    <string name="your_orders_list">Your orders list</string>
+    <string name="add_to_shopping_cart">Add to shopping cart</string>
+    <string name="create_account">Create account</string>
+    <string name="phone_number">phone number</string>
+    <string name="repeat_password">repeat password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="hello_mr_u_ytkowniku" translatable="false">Hello mr.UŻYTKOWNIKU</string>
+    <string name="merry_christmas">merry christmas</string>
+    <string name="orders">orders</string>
+    <string name="about">about</string>
+    <string name="logging">Logging in...</string>
+    <string name="log_failed">Log in failed</string>
+    <string name="reg_succ">Registered successfully</string>
+    <string name="reg_unsucc">Register unsuccesfull</string>
+    <string name="see_your_orders">See your orders</string>
+    <string name="about_the_author">About the author</string>
+    <string name="log_out">Log out</string>
+    <string name="search">Search</string>
+</resources>
