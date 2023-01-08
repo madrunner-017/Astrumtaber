@@ -72,7 +72,7 @@ public class CartFragment extends Fragment {
             Log.v("TAG", idList2.toString());
 
             for (String id: idList2){
-                Toast.makeText(getActivity(), id, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), id, Toast.LENGTH_SHORT).show();
                 if (id == "" || id == " " || id == "  "){
                     continue;
                 }else {
@@ -132,7 +132,7 @@ public class CartFragment extends Fragment {
                 }
                 OrderModel orderModel = new OrderModel(recipient, date, Integer.valueOf(tvTotalPrice.getText().toString()), content.trim());
                 databaseHelper.addOrder(orderModel);
-                Toast.makeText(getActivity(), orderModel.toString(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), orderModel.toString(), Toast.LENGTH_SHORT).show();
                 manager = getParentFragmentManager();
                 manager.beginTransaction()
                         .replace(R.id.fragmentContainerViewMain, new OrdersFragment())
@@ -147,9 +147,8 @@ public class CartFragment extends Fragment {
                 javaMailAPI.execute();
 
 
-
-                SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(String.valueOf(phone), null, "You just ordered: "+ content.trim(), null, null);
+//                SmsManager smsManager = SmsManager.getDefault();
+//                smsManager.sendTextMessage(String.valueOf(phone), null, "You just ordered: "+ content.trim(), null, null);
 
             }
         });

@@ -80,14 +80,14 @@ public class HomeScreenFragment extends Fragment{
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.orders:
-                                Toast.makeText(getActivity(), orders, Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getActivity(), orders, Toast.LENGTH_SHORT).show();
                                 manager.beginTransaction()
                                         .replace(R.id.fragmentContainerViewMain, new OrdersFragment())
                                         .commit();
                                 break;
 
                             case R.id.about:
-                                Toast.makeText(getActivity(), about, Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getActivity(), about, Toast.LENGTH_SHORT).show();
                                 manager.beginTransaction()
                                         .replace(R.id.fragmentContainerViewMain, new AboutFragment())
                                         .commit();

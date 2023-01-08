@@ -124,6 +124,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
+    public boolean selectOneMail(String email){
+
+        UserModel returnUser = new UserModel();
+
+        String logInQuery = "SELECT * FROM " + USERS_TABLE + " WHERE " + COLUMN_CUSTOMER_EMAIL + " = \"" + email + "\";";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(logInQuery, null);
+
+        if (cursor.moveToFirst()){
+            return true;
+        }
+        cursor.close();
+        db.close();
+        return false;
+    }
+
     public boolean selectOne(String email, String password){
 
         UserModel returnUser = new UserModel();
@@ -193,8 +211,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return phone;
     }
 
-    public List<OrderModel> selectAllOrders(){
-        String selectQuery = "SELECT * FROM " + ORDERS_TABLE;
+    public List<OrderModel> selectAllOrders(OrderModel orderModel){
+        String selectQuery = "SELECT * FROM " + ORDERS_TABLE + " WHERE " + COLUMN_ORDER_RECIPIENT + " = '" + orderModel.getRecipient() + "'";
 
         List<OrderModel> returnList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();

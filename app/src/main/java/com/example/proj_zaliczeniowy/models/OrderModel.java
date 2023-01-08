@@ -24,6 +24,10 @@ public class OrderModel {
         this.content = content;
     }
 
+    public OrderModel(String recipient) {
+        this.recipient = recipient;
+    }
+
     public OrderModel() {
     }
 

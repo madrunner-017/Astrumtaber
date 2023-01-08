@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.example.proj_zaliczeniowy.models.UserModel;
 
 public class SignUpFragment extends Fragment {
 
+    ImageView logoBtn;
     LinearLayout inputs;
     EditText editEmail;
     EditText editPhone;
@@ -53,6 +55,7 @@ public class SignUpFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
 
+        logoBtn = view.findViewById(R.id.logoBtn);
         inputs = view.findViewById(R.id.signUpInputs);
         editEmail = view.findViewById(R.id.edit_signup_mail);
         editPhone = view.findViewById(R.id.edit_signup_phone);
@@ -62,6 +65,16 @@ public class SignUpFragment extends Fragment {
         isValid = false;
         manager = getParentFragmentManager();
         databaseHelper = new DatabaseHelper(getActivity());
+
+
+        logoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                manager.beginTransaction()
+                        .replace(R.id.fragmentContainerViewMain, new WelcomeFragment())
+                        .commit();
+            }
+        });
 
         sharedpreferences = getActivity().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
         email = sharedpreferences.getString(EMAIL_KEY, null);
@@ -76,22 +89,27 @@ public class SignUpFragment extends Fragment {
                 if (isValid){
 
                     userModel = new UserModel(-1, editEmail.getText().toString(), Integer.valueOf(editPhone.getText().toString()), editPassword.getText().toString());
-                    Toast.makeText(getActivity(), userModel.toString(), Toast.LENGTH_SHORT).show();
-                    boolean success = databaseHelper.addOne(userModel);
-                    if (success){
-                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                    if (!databaseHelper.selectOneMail(userModel.getEmail())){
+                        Toast.makeText(getActivity(), userModel.toString(), Toast.LENGTH_SHORT).show();
+                        boolean success = databaseHelper.addOne(userModel);
+                        if (success){
+                            SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                        editor.putString(EMAIL_KEY, editEmail.getText().toString());
-                        editor.putString(PASSWORD_KEY, editPassword.getText().toString());
-                        editor.commit();
+                            editor.putString(EMAIL_KEY, editEmail.getText().toString());
+                            editor.putString(PASSWORD_KEY, editPassword.getText().toString());
+                            editor.commit();
 
-                        Toast.makeText(getActivity(), reg_succ, Toast.LENGTH_SHORT).show();
-                        manager.beginTransaction()
-                                .replace(R.id.fragmentContainerViewMain, new HomeScreenFragment())
-                                .commit();
+                            Toast.makeText(getActivity(), reg_succ, Toast.LENGTH_SHORT).show();
+                            manager.beginTransaction()
+                                    .replace(R.id.fragmentContainerViewMain, new HomeScreenFragment())
+                                    .commit();
+                        } else {
+                            Toast.makeText(getActivity(), R.string.reg_unsucc, Toast.LENGTH_SHORT).show();
+                        }  
                     } else {
-                        Toast.makeText(getActivity(), R.string.reg_unsucc, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Account already exists", Toast.LENGTH_SHORT).show();
                     }
+//                 
 
 
                 }

@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.proj_zaliczeniowy.others.DatabaseHelper;
@@ -25,6 +26,7 @@ import com.example.proj_zaliczeniowy.models.UserModel;
 
 public class LogInFragment extends Fragment {
 
+    ImageView logoBtn;
     EditText editEmail;
     EditText editPassword;
     Button logIn;
@@ -51,12 +53,22 @@ public class LogInFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_log_in, container, false);
 
+        logoBtn = view.findViewById(R.id.logoBtn2);
         editEmail = view.findViewById(R.id.edit_login_mail);
         editPassword = view.findViewById(R.id.edit_login_password);
         logIn = view.findViewById(R.id.btn_log);
         isValid = false;
         manager = getParentFragmentManager();
         databaseHelper = new DatabaseHelper(getActivity());
+
+        logoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                manager.beginTransaction()
+                        .replace(R.id.fragmentContainerViewMain, new WelcomeFragment())
+                        .commit();
+            }
+        });
 
         sharedpreferences = getActivity().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
         email = sharedpreferences.getString(EMAIL_KEY, null);
