@@ -147,8 +147,8 @@ public class CartFragment extends Fragment {
                 javaMailAPI.execute();
 
 
-//                SmsManager smsManager = SmsManager.getDefault();
-//                smsManager.sendTextMessage(String.valueOf(phone), null, "You just ordered: "+ content.trim(), null, null);
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(String.valueOf(phone), null, "You just ordered: "+ content.trim(), null, null);
 
             }
         });
